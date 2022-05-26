@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:foodhub/screens/on_boarding/on_boarding_main.dart';
 
 
 class WelcomeScreen extends StatelessWidget {
@@ -54,7 +55,7 @@ class WelcomeScreen extends StatelessWidget {
                               color: Color(0xFFFE724C)
                           )))),
                     ),
-                    welcomeText(),
+                    welcomeText(context),
                     Padding(
                       padding: const EdgeInsets.only(top: 140),
                       child: Row(
@@ -162,10 +163,10 @@ class WelcomeScreen extends StatelessWidget {
                             padding: MaterialStateProperty.all(const EdgeInsets.symmetric(horizontal:0 )),
                             fixedSize: MaterialStateProperty.all(const Size(450,54)),
                             side: MaterialStateProperty.all(const BorderSide(width: 1,color: Colors.white))
-
-
                         ),
-                        onPressed: (){},
+                        onPressed: (){
+                          Navigator.of(context).push(MaterialPageRoute(builder: (context) => const OnBoardingMain(),));
+                        },
                         child:const Text("Start with email or phone",
                             style:TextStyle(
                                 fontFamily: "sofiapro",
@@ -211,37 +212,33 @@ class WelcomeScreen extends StatelessWidget {
     ));
   }
 
-  Widget welcomeText(){
+  Widget welcomeText(BuildContext context){
     return Column(
       children: [
-        const Padding(
-          padding: EdgeInsets.only(top:80,right: 45),
+        Padding(
+          padding: const EdgeInsets.only(top:80,right: 45),
           child: Text("Welcome to",
-              style:TextStyle(
-                fontFamily: "sofiapro",
-                fontSize: 50,
-                fontWeight: FontWeight.w700,
-              )),
+              style:Theme.of(context).textTheme.headline1!.copyWith(
+                color: Colors.black
+              )
+          ),
         ),
-        const Padding(
-          padding: EdgeInsets.only(right: 125,top: 10 ),
+        Padding(
+          padding: const EdgeInsets.only(right: 125,top: 10 ),
           child: Text("FoodHub",
-              style:TextStyle(
-                fontFamily: "sofiapro",
-                fontSize: 45,
-                fontWeight: FontWeight.w700,
-                color: Color(0xFFFE724C),
-              )),
+              style:Theme.of(context).textTheme.headline1!.copyWith(
+                color: const Color(0xFFFE724C),
+              )
+          ),
         ),
         Padding(
           padding: const EdgeInsets.only(top: 7,right: 79,left: 28),
           child: Text("Your favourite foods delivered fast at your door.",
-              style:TextStyle(
-                fontFamily: "sofiapro",
-                fontSize: 17,
-                height: 1.5,
-                color: const Color(0xFF30384F).withOpacity(.87),
-              )),
+              style:Theme.of(context).textTheme.subtitle1!.copyWith(
+                    fontSize: 17,
+                    height: 1.5,
+                    color: const Color(0xFF30384F).withOpacity(.87),
+                  )),
         ),
       ],
     );

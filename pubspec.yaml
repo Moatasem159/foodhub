@@ -31,6 +31,7 @@ dependencies:
     sdk: flutter
   google_fonts: ^3.0.0
   font_awesome_flutter: ^10.1.0
+  smooth_page_indicator: ^1.0.0+2
 
 
 
@@ -64,6 +65,27 @@ flutter:
   assets:
    - lib/global/images/welcome image.jpg
    - lib/global/images/google logo.png
+   - lib/global/images/onboardingImages/onboarding1/Ellipse 90.png
+   - lib/global/images/onboardingImages/onboarding1/onboardingonemain.png
+   - lib/global/images/onboardingImages/onboarding1/pizzahut.png
+   - lib/global/images/onboardingImages/onboarding1/starbucks.png
+   - lib/global/images/onboardingImages/onboarding1/kfc.png
+   - lib/global/images/onboardingImages/onboarding1/burgerking.png
+   - lib/global/images/onboardingImages/onboarding1/myjohns.png
+
+   - lib/global/images/onboardingImages/onboarding2/onboardingtwomain.png
+   - lib/global/images/onboardingImages/onboarding2/containerone.png
+   - lib/global/images/onboardingImages/onboarding2/containertwo.png
+   - lib/global/images/onboardingImages/onboarding2/containerthree.png
+   - lib/global/images/onboardingImages/onboarding2/containerfour.png
+   - lib/global/images/onboardingImages/onboarding2/containerfive.png
+
+   - lib/global/images/onboardingImages/onboarding3/onboardingthreemain.png
+   - lib/global/images/onboardingImages/onboarding3/containerone.png
+   - lib/global/images/onboardingImages/onboarding3/containertwo.png
+   - lib/global/images/onboardingImages/onboarding3/containerthree.png
+   - lib/global/images/onboardingImages/onboarding3/containerfour.png
+   - lib/global/images/onboardingImages/onboarding3/containerfive.png
 
   # An image asset can refer to one or more resolution-specific "variants", see
   # https://flutter.dev/assets-and-images/#resolution-aware.
